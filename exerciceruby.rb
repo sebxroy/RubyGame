@@ -21,42 +21,45 @@ def guessNbGame()
 
     puts " "
     puts "Choose your desired difficulty between 1 to 5"
+    puts " "
     level = gets.to_i
+
 
     if level == 1
 
-        puts "Very Easy"
+        puts "You chose Very Easy lol"
         secretNb = rand(9) + 1
         maxTries = 9999
 
     elsif level == 2
 
-        puts "Easy"
+        puts "You chose Easy, sight"
         secretNb = rand(9) + 1
         maxTries = 5
 
     elsif level == 3
 
-        puts "Medium"
+        puts "You chose Medium"
         secretNb = rand(99) + 1
         maxTries = 6
 
     elsif level == 4
 
-        puts "Difficult"
+        puts "You chose Difficult, not bad"
         secretNb = rand(499) + 1
         maxTries = 8
 
     elsif level == 5
         
-        puts "Very difficult"
+        puts "You chose Very difficult, good luck."
         secretNb = rand (999) + 1
         maxTries = 9
 
     end
-        
-    puts "Let's start in 3, 2, 1, lift off"
-    puts "      "
+    
+    puts " "
+    puts "Let's start in 3, 2, 1..."
+    puts " "
     puts "Guess the number"
 
     while guessNb != secretNb or !timeOut do
@@ -69,13 +72,13 @@ def guessNbGame()
             elsif guessNb > secretNb
                 puts "The secret number is lower" 
             else
-                puts "You win !!!!!!"
+                puts "You win this one!"
                 timeOut = true     
             end
         else
             timeOut = true
             guessNb = secretNb
-            puts "You reached the maximum number of tries, shame"
+            puts "You reached the maximum number of tries, shame!!"
             puts ""
             puts "The secret number was  #{secretNb}"
         end
@@ -88,6 +91,13 @@ def guessNbGame()
 
 end 
 
+puts "0123456789876543212345678987654321234567898765432123456789876543212345678987654321234567891"
+puts "0                                                                                         1"
+puts "0                                                                                         1"
+puts "0                  W 3 1_ C 0 M 3   T 0    T H 3    N 1 G H T M A R 3                     1"
+puts "0                                                                                         1"
+puts "0                                                                                         1"
+puts "0123456789876543212345678987654321234567898765432123456789876543212345678987654321234567891"
 puts " "
 puts " "
 puts "*Jigsaw voice* 'I want to play a gameee', Do you? y or n"
@@ -102,7 +112,7 @@ print "Now enter your name: "
 name = gets.to_s
 
 puts " "
-puts "Hello #{name}"
+puts "Hello  #{name} "
 
 guessNbGame()
 
